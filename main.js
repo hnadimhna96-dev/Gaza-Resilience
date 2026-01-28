@@ -4,27 +4,24 @@
 
 $(document).ready(function () {
 
-    // 1. مصفوفة البيانات (Arrays/Objects) - لتخزين قصص الصمود 
-    const storiesData = [
-        {
-            id: 1,
-            title: "حكاية صمود في الشمال",
-            description: "قصة عائلة رفضت النزوح وأعادت بناء فرن يدوي لإطعام الحي.",
-            image: "assets/images/story1.jpg"
-        },
-        {
-            id: 2,
-            title: "المعلمة والمخيم",
-            description: "كيف حولت إحدى المعلمات خيمتها إلى مدرسة بديلة لتعليم الأطفال.",
-            image: "assets/images/story2.jpg"
-        },
-        {
-            id: 3,
-            title: "إرادة المزارع",
-            description: "قصة مزارع استصلح أرضه المدمرة لزراعة الخضروات الأساسية.",
-            image: "assets/images/story3.jpg"
-        }
-    ];
+    /// ابحثي عن الجزء الذي يحتوي على الصور وغيريه ليكون هكذا:
+const storiesData = [
+    {
+        title: "إرادة المزارع",
+        text: "قصة مزارع استصلح أرضه...",
+        image: "story1.jpg" // احذفي assets/images/ واتركي اسم الصورة فقط
+    },
+    {
+        title: "قصة صمود 2",
+        text: "وصف القصة...",
+        image: "story2.jpg"
+    },
+    {
+        title: "قصة صمود 3",
+        text: "وصف القصة...",
+        image: "story3.jpg"
+    }
+];
 
     // 2. استخدام Loop لعرض البيانات ديناميكياً (Data-driven Rendering) 
     const storiesContainer = $('#stories-list');
