@@ -1,7 +1,6 @@
 /* مشروع منصة توثيق قصص الصمود - جامعة الأقصى
    هذا الملف مسؤول عن عرض البيانات ديناميكياً والتفاعل مع المستخدم
 */
-
 $(document).ready(function () {
 
     /// ابحثي عن الجزء الذي يحتوي على الصور وغيريه ليكون هكذا:
@@ -22,7 +21,6 @@ const storiesData = [
         image: "story3.jpg"
     }
 ];
-
     // 2. استخدام Loop لعرض البيانات ديناميكياً (Data-driven Rendering) 
     const storiesContainer = $('#stories-list');
 
@@ -41,14 +39,12 @@ const storiesData = [
         `;
         storiesContainer.append(cardHtml); // إضافة البطاقة داخل قسم القصص 
     });
-
     // 3. إضافة تفاعلات jQuery (تأثير Fade و Slide) [cite: 163]
     $(document).on('click', '.show-details', function () {
         // تغيير محتوى الزر عند الضغط (DOM Manipulation) 
         $(this).text("تمت القراءة").addClass("btn-success").removeClass("btn-outline-primary");
         alert("سيتم عرض تفاصيل القصة كاملة في نافذة منبثقة قريباً!"); 
     });
-
     // 4. التحقق من نموذج الاتصال (Event Submit) 
     $('#contactForm').on('submit', function (e) {
         e.preventDefault();
